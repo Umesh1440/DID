@@ -84,18 +84,24 @@
             font-weight: bold;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .skills-table td {
+            padding: 15px;
+            vertical-align: top;
+            border: 1px solid #e0e0e0;
         }
 
         .skill-category {
             font-weight: bold;
             color: #2c3e50;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
-        
+
         .certifications-list {
             padding-left: 20px;
         }
@@ -108,7 +114,7 @@
         <div class="contact-info">
             <div>+91 8882107739</div>
             <div><a href="mailto:umcs0441@gmail.com">umcs0441@gmail.com</a></div>
-            <div><a href="https://www.linkedin.com/in/umesh-sharma-08986b225/">LinkedIn</a></div>
+            <div><a href="https://www.linkedin.com/in/umesh-sharma-08986b225/" target="_blank">LinkedIn</a></div>
             <div>Delhi, INDIA</div>
         </div>
     </div>
@@ -190,36 +196,44 @@
 
     <section>
         <h2>SKILLS</h2>
-        <div class="skills-grid">
-            <div>
-                <div class="skill-category">Vulnerability Analysis</div>
-                <div>Proficient in manual and automated vulnerability analysis, utilizing security tools</div>
-            </div>
-            <div>
-                <div class="skill-category">Penetration Testing</div>
-                <div>Skilled in conducting penetration tests for web services, mobile apps, APIs, and networks</div>
-            </div>
-            <div>
-                <div class="skill-category">Framework Knowledge</div>
-                <div>OWASP and MITRE ATTACK Framework expertise, including identifying logic vulnerabilities</div>
-            </div>
-            <div>
-                <div class="skill-category">Testing Methodologies</div>
-                <div>Experienced in white-box, black-box, and grey-box testing methodologies</div>
-            </div>
-            <div>
-                <div class="skill-category">System Hardening & Configuration</div>
-                <div>Performing system hardening & configuration review audits</div>
-            </div>
-            <div>
-                <div class="skill-category">Documentation Skills</div>
-                <div>Proficient in documenting findings and creating detailed vulnerability reports</div>
-            </div>
-            <div>
-                <div class="skill-category">CI/CD Automation Security</div>
-                <div>Integrated security tools into Jenkins/Azure pipelines for automated security scans</div>
-            </div>
-        </div>
+        <table class="skills-table">
+            <tr>
+                <td>
+                    <div class="skill-category">Vulnerability Analysis</div>
+                    <div>Proficient in manual and automated vulnerability analysis, utilizing security tools</div>
+                </td>
+                <td>
+                    <div class="skill-category">Penetration Testing</div>
+                    <div>Skilled in conducting penetration tests for web services, mobile apps, APIs, and networks</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="skill-category">Framework Knowledge</div>
+                    <div>OWASP and MITRE ATTACK Framework expertise, including identifying logic vulnerabilities</div>
+                </td>
+                <td>
+                    <div class="skill-category">Testing Methodologies</div>
+                    <div>Experienced in white-box, black-box, and grey-box testing methodologies</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="skill-category">System Hardening & Configuration</div>
+                    <div>Performing system hardening & configuration review audits</div>
+                </td>
+                <td>
+                    <div class="skill-category">Documentation Skills</div>
+                    <div>Proficient in documenting findings and creating detailed vulnerability reports</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="skill-category">CI/CD Automation Security</div>
+                    <div>Integrated security tools into Jenkins/Azure pipelines for automated security scans</div>
+                </td>
+            </tr>
+        </table>
     </section>
 
     <section>
