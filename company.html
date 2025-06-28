@@ -1,306 +1,801 @@
+<!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   Defindepth Technologies Pvt Ltd
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <meta name="description" content="Defindepth Technologies - Your trusted partner for cybersecurity, secure web development, and DevSecOps solutions.">
+  <title>Defindepth Technologies Pvt Ltd | Cybersecurity & Web Development</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
-   body {
+    body {
       font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
     }
-   a.social-icon {
-     transition: color 0.3s ease;
-   }
-   a.social-icon:hover {
-     color: #4F46E5; /* Indigo-600 */
-   }
+    .gradient-bg {
+      background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+    }
+    .social-icon {
+      transition: all 0.3s ease;
+    }
+    .social-icon:hover {
+      transform: translateY(-3px);
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
   </style>
- </head>
- <body class="bg-gray-50 text-gray-900">
+</head>
+<body class="bg-gray-50 text-gray-800">
   <!-- Header -->
-  <header class="bg-white shadow-md fixed w-full z-30">
-   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-     <a class="flex items-center space-x-2" href="#">
-      <img alt="Defindepth Technologies logo" class="h-6 w-auto" src="./logo.png" />
-      <span class="font-semibold text-xl text-indigo-600">
-       Defindepth
-      </span>
-     </a>
-     <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
-      <a class="hover:text-indigo-600 transition" href="#services">
-       Services
-      </a>
-      <a class="hover:text-indigo-600 transition" href="#blog">
-       Blog
-      </a>
-      <a class="hover:text-indigo-600 transition" href="#contact">
-       Contact
-      </a>
-      <a class="hover:text-indigo-600 transition" href="#career">
-       Career
-      </a>
-     </nav>
-     <div class="hidden md:flex space-x-4 items-center">
-      <a aria-label="LinkedIn" class="social-icon text-gray-700 hover:text-indigo-600" href="https://www.linkedin.com/company/defindepth-technologies" rel="noopener noreferrer" target="_blank">
-       <i class="fab fa-linkedin fa-lg"></i>
-      </a>
-      <a aria-label="WhatsApp" class="social-icon text-gray-700 hover:text-indigo-600" href="https://wa.me/8700246195" rel="noopener noreferrer" target="_blank">
-       <i class="fab fa-whatsapp fa-lg"></i>
-      </a>
-      <a aria-label="Telegram" class="social-icon text-gray-700 hover:text-indigo-600" href="https://t.me/defindepth" rel="noopener noreferrer" target="_blank">
-       <i class="fab fa-telegram fa-lg"></i>
-      </a>
-     </div>
-     <button aria-label="Toggle menu" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-600" id="menu-btn">
-      <i class="fas fa-bars fa-lg">
-      </i>
-     </button>
+  <header class="bg-white shadow-sm fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a class="flex items-center space-x-3" href="#">
+          <img alt="Defindepth Technologies logo" class="h-8 w-auto" src="logo.png" />
+          <span class="font-bold text-2xl bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            Defindepth
+          </span>
+        </a>
+        <nav class="hidden md:flex space-x-10 text-gray-700 font-medium">
+          <a class="hover:text-indigo-600 transition relative group" href="#services">
+            Services
+            <span class="absolute left-0 bottom-0 h-0.5 bg-indigo-600 w-0 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a class="hover:text-indigo-600 transition relative group" href="#about">
+            About
+          </a>
+          <a class="hover:text-indigo-600 transition relative group" href="#blog">
+            Insights
+          </a>
+          <a class="hover:text-indigo-600 transition relative group" href="#contact">
+            Contact
+          </a>
+          <a class="hover:text-indigo-600 transition relative group" href="#career">
+            Careers
+          </a>
+        </nav>
+        <div class="hidden md:flex space-x-5 items-center">
+          <a aria-label="LinkedIn" class="social-icon text-gray-600 hover:text-indigo-600" href="https://www.linkedin.com/company/defindepth-technologies" rel="noopener noreferrer" target="_blank">
+            <i class="fab fa-linkedin-in fa-lg"></i>
+          </a>
+          <a aria-label="WhatsApp" class="social-icon text-gray-600 hover:text-indigo-600" href="https://wa.me/8700246195" rel="noopener noreferrer" target="_blank">
+            <i class="fab fa-whatsapp fa-lg"></i>
+          </a>
+          <a aria-label="Telegram" class="social-icon text-gray-600 hover:text-indigo-600" href="https://t.me/defindepth" rel="noopener noreferrer" target="_blank">
+            <i class="fab fa-telegram-plane fa-lg"></i>
+          </a>
+          <a class="ml-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-5 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1" href="#contact">
+            Get in Touch
+          </a>
+        </div>
+        <button aria-label="Toggle menu" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-md p-2" id="menu-btn">
+          <i class="fas fa-bars fa-lg"></i>
+        </button>
+      </div>
     </div>
-   </div>
-   <!-- Mobile menu -->
-   <div class="hidden md:hidden bg-white border-t border-gray-200" id="mobile-menu">
-    <nav class="flex flex-col space-y-1 p-4 text-gray-700 font-medium">
-     <a class="hover:text-indigo-600 transition" href="#services">
-      Services
-     </a>
-     <a class="hover:text-indigo-600 transition" href="#blog">
-      Blog
-     </a>
-     <a class="hover:text-indigo-600 transition" href="#contact">
-      Contact
-     </a>
-     <a class="hover:text-indigo-600 transition" href="#career">
-      Career
-     </a>
-     <div class="flex space-x-6 mt-4 justify-center">
-      <a aria-label="LinkedIn" class="social-icon text-gray-700 hover:text-indigo-600" href="https://www.linkedin.com/company/defindepth-technologies" rel="noopener noreferrer" target="_blank">
-       <i class="fab fa-linkedin fa-lg"></i>
-      </a>
-      <a aria-label="WhatsApp" class="social-icon text-gray-700 hover:text-indigo-600" href="https://wa.me/8700246195" rel="noopener noreferrer" target="_blank">
-       <i class="fab fa-whatsapp fa-lg"></i>
-      </a>
-      <a aria-label="Telegram" class="social-icon text-gray-700 hover:text-indigo-600" href="https://t.me/defindepth" rel="noopener noreferrer" target="_blank">
-       <i class="fab fa-telegram fa-lg"></i>
-      </a>
-     </div>
-    </nav>
-   </div>
+    <!-- Mobile menu -->
+    <div class="hidden md:hidden bg-white shadow-lg" id="mobile-menu">
+      <nav class="flex flex-col space-y-3 p-6 text-gray-700 font-medium">
+        <a class="hover:text-indigo-600 transition py-2 border-b border-gray-100" href="#services">
+          Services
+        </a>
+        <a class="hover:text-indigo-600 transition py-2 border-b border-gray-100" href="#about">
+          About
+        </a>
+        <a class="hover:text-indigo-600 transition py-2 border-b border-gray-100" href="#blog">
+          Insights
+        </a>
+        <a class="hover:text-indigo-600 transition py-2 border-b border-gray-100" href="#contact">
+          Contact
+        </a>
+        <a class="hover:text-indigo-600 transition py-2" href="#career">
+          Careers
+        </a>
+        <div class="flex space-x-6 mt-4 justify-center">
+          <a aria-label="LinkedIn" class="social-icon text-gray-600 hover:text-indigo-600" href="https://www.linkedin.com/company/defindepth-technologies" rel="noopener noreferrer" target="_blank">
+            <i class="fab fa-linkedin-in fa-lg"></i>
+          </a>
+          <a aria-label="WhatsApp" class="social-icon text-gray-600 hover:text-indigo-600" href="https://wa.me/8700246195" rel="noopener noreferrer" target="_blank">
+            <i class="fab fa-whatsapp fa-lg"></i>
+          </a>
+          <a aria-label="Telegram" class="social-icon text-gray-600 hover:text-indigo-600" href="https://t.me/defindepth" rel="noopener noreferrer" target="_blank">
+            <i class="fab fa-telegram-plane fa-lg"></i>
+          </a>
+        </div>
+        <a class="mt-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-5 py-3 rounded-full text-center hover:shadow-lg transition" href="#contact">
+          Contact Us
+        </a>
+      </nav>
+    </div>
   </header>
-  <main class="pt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-   <!-- Hero Section with increased height -->
-   <section class="flex flex-col md:flex-row items-center justify-center md:justify-between bg-white rounded-lg shadow-md p-8 my-12" style="min-height: 180px;">
-    <img alt="Shield icon representing security" class="w-28 h-28 mb-6 md:mb-0 md:mr-8" height="120" src="https://storage.googleapis.com/a1aa/image/bc6db80b-7869-4182-9b3d-1da8b1aab728.jpg" width="120"/>
-    <div class="text-center md:text-left max-w-xl">
-     <h1 class="text-3xl font-semibold text-indigo-700 mb-2">
-      Defindepth Technologies Pvt Ltd
-     </h1>
-     <p class="text-gray-600 mb-6 text-lg">
-      Your Trusted Security Service Company
-     </p>
-     <a class="inline-block bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 transition" href="#contact">
-      Contact Us
-     </a>
-    </div>
-   </section>
-   <!-- Services Section -->
-   <section class="mb-16" id="services">
-    <h2 class="text-2xl font-semibold text-indigo-700 mb-8 text-center">
-     Our Services
-    </h2>
-    <div aria-label="Services offered" class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center" role="list">
-     <!-- Cyber Security Audit -->
-     <article class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition">
-      <img alt="Magnifying glass icon representing cyber security audit" class="mb-4" height="80" src="https://storage.googleapis.com/a1aa/image/2bbefc34-24f7-4a60-85f5-9ab184b5d250.jpg" width="80"/>
-      <h3 class="font-semibold text-lg mb-2">
-       Cyber Security Audit
-      </h3>
-      <ul class="text-gray-600 text-sm list-disc list-inside space-y-1">
-       <li>
-        Web VAPT
-       </li>
-       <li>
-        Mobile VAPT
-       </li>
-       <li>
-        Network VAPT
-       </li>
-       <li>
-        Web API Security
-       </li>
-       <li>
-        SAST
-       </li>
-       <li>
-        DAST
-       </li>
-      </ul>
-     </article>
-     <!-- Secure Web Development -->
-     <article class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition">
-      <img alt="Code brackets icon representing secure web development" class="mb-4" height="80" src="https://storage.googleapis.com/a1aa/image/0255d1be-8f79-4205-2675-d9ee6a50b70a.jpg" width="80"/>
-      <h3 class="font-semibold text-lg mb-2">
-       Secure Web Development
-      </h3>
-      <ul class="text-gray-600 text-sm list-disc list-inside space-y-1">
-       <li>
-        Web Development
-       </li>
-       <li>
-        Cloud-based Web Apps
-       </li>
-       <li>
-        E-commerce Solutions
-       </li>
-       <li>
-        Payment Module Integration
-       </li>
-      </ul>
-     </article>
-     <!-- DevSecOps -->
-     <article class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition">
-      <img alt="Gear and code icon representing DevSecOps" class="mb-4" height="80" src="https://storage.googleapis.com/a1aa/image/d259e4c8-502b-4549-0318-789d38a70285.jpg" width="80"/>
-      <h3 class="font-semibold text-lg mb-2">
-       DevSecOps
-      </h3>
-      <ul class="text-gray-600 text-sm list-disc list-inside space-y-1 text-left">
-       <li>
-        DevOps Support &amp; Automation
-       </li>
-       <li>
-        Deployment in AWS, Azure, GCP
-       </li>
-       <li>
-        Maintenance &amp; Cost Optimization
-       </li>
-       <li>
-        All DevOps Tasks
-       </li>
-      </ul>
-     </article>
-    </div>
-   </section>
-   <!-- Blog Section -->
-   <section class="mb-16" id="blog">
-    <h2 class="text-2xl font-semibold text-indigo-700 mb-8 text-center">
-     Latest Blog Posts
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-     <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-      <img alt="Illustration of cyber security concept" class="rounded-md mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/c35435b5-f3c5-4d5a-bcc4-d60d5591d309.jpg" width="400"/>
-      <h3 class="font-semibold text-lg mb-2">
-       Top 5 Cyber Security Trends in 2024
-      </h3>
-      <p class="text-gray-600 text-sm">
-       Stay ahead with the latest trends in cyber security to protect your business.
-      </p>
-     </article>
-     <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-      <img alt="Illustration of web development process" class="rounded-md mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/7ce5a09f-d9ed-4159-a0a6-36b48b9798ee.jpg" width="400"/>
-      <h3 class="font-semibold text-lg mb-2">
-       Building Secure Web Applications
-      </h3>
-      <p class="text-gray-600 text-sm">
-       Best practices and tools for developing secure and scalable web apps.
-      </p>
-     </article>
-     <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-      <img alt="Illustration of DevOps automation" class="rounded-md mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/6afbf16f-9096-4363-caa0-a4b059cc28cf.jpg" width="400"/>
-      <h3 class="font-semibold text-lg mb-2">
-       DevSecOps: Integrating Security in DevOps
-      </h3>
-      <p class="text-gray-600 text-sm">
-       How to automate security in your DevOps pipeline for faster and safer releases.
-      </p>
-     </article>
-    </div>
-   </section>
-   <!-- Contact Section -->
-   <section class="bg-white rounded-lg shadow-md p-8 max-w-3xl mx-auto mb-16" id="contact">
-    <h2 class="text-2xl font-semibold text-indigo-700 mb-6 text-center">
-     Contact Us
-    </h2>
-    <p class="text-center text-gray-700 text-lg mb-2">
-     Please mail to <a class="text-indigo-600 underline" href="mailto:contact@didtechnologies.com">contact@didtechnologies.com</a> to contact us.
-    </p>
-    <p class="text-center text-gray-700 text-lg">
-     Or call us at <a class="text-indigo-600 underline" href="tel:+918700246195">8700246195</a>
-    </p>
-   </section>
-   <!-- Career Section -->
-   <section class="bg-white rounded-lg shadow-md p-8 max-w-3xl mx-auto mb-16" id="career">
-    <h2 class="text-2xl font-semibold text-indigo-700 mb-6 text-center">
-     Career Opportunities
-    </h2>
-    <p class="text-gray-700 mb-4 text-center">
-     Join our team and help us build secure and innovative technology solutions.
-    </p>
-    <ul class="list-disc list-inside max-w-xl mx-auto space-y-2 text-gray-600">
-     <li>
-      Security Analyst
-     </li>
-     <li>
-      Web Developer (Full Stack)
-     </li>
-     <li>
-      DevOps Engineer
-     </li>
-     <li>
-      Cloud Security Specialist
-     </li>
-     <li>
-      Technical Support Engineer
-     </li>
-    </ul>
-    <p class="text-center text-gray-700 mt-6 text-lg">
-     Mail your CV to <a class="text-indigo-600 underline" href="mailto:contact@didtechnologies.com">contact@didtechnologies.com</a>
-    </p>
-   </section>
+
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div class="lg:w-1/2">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+            Securing Your Digital <span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Future</span>
+          </h1>
+          <p class="text-lg md:text-xl text-gray-600 mb-8">
+            Defindepth Technologies provides cutting-edge cybersecurity solutions, secure web development, and DevSecOps services to protect and empower your business in the digital landscape.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-full text-center font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1" href="#contact">
+              Get Started
+            </a>
+            <a class="border border-indigo-600 text-indigo-600 px-8 py-3 rounded-full text-center font-medium hover:bg-indigo-50 transition" href="#services">
+              Our Services
+            </a>
+          </div>
+          <div class="mt-10 flex items-center space-x-6">
+            <div class="flex -space-x-2">
+              <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/12.jpg" alt="Client">
+              <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+              <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Client">
+            </div>
+            <div>
+              <p class="text-gray-600 text-sm">Trusted by 100+ clients worldwide</p>
+              <div class="flex items-center mt-1">
+                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                <span class="text-gray-600 ml-2 text-sm">5.0 (120 reviews)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/2 relative">
+          <img src="https://storage.googleapis.com/a1aa/image/bc6db80b-7869-4182-9b3d-1da8b1aab728.jpg" alt="Cybersecurity illustration" class="w-full h-auto rounded-xl shadow-xl animate-float">
+          <div class="absolute -bottom-8 -left-8 bg-white p-4 rounded-xl shadow-lg hidden md:block">
+            <div class="flex items-center">
+              <div class="bg-indigo-100 p-3 rounded-full mr-3">
+                <i class="fas fa-shield-alt text-indigo-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold">Enterprise Security</p>
+                <p class="text-sm text-gray-500">24/7 Protection</p>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -top-8 -right-8 bg-white p-4 rounded-xl shadow-lg hidden md:block">
+            <div class="flex items-center">
+              <div class="bg-purple-100 p-3 rounded-full mr-3">
+                <i class="fas fa-lock text-purple-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold">Compliance</p>
+                <p class="text-sm text-gray-500">GDPR, HIPAA Ready</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="bg-gray-50 py-12 mb-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="text-center text-gray-500 text-sm font-semibold tracking-wider mb-8">TRUSTED BY INDUSTRY LEADERS</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-center">
+          <img src="https://via.placeholder.com/150x60?text=Client+1" alt="Client logo" class="h-12 opacity-60 hover:opacity-100 transition mx-auto">
+          <img src="https://via.placeholder.com/150x60?text=Client+2" alt="Client logo" class="h-12 opacity-60 hover:opacity-100 transition mx-auto">
+          <img src="https://via.placeholder.com/150x60?text=Client+3" alt="Client logo" class="h-12 opacity-60 hover:opacity-100 transition mx-auto">
+          <img src="https://via.placeholder.com/150x60?text=Client+4" alt="Client logo" class="h-12 opacity-60 hover:opacity-100 transition mx-auto">
+          <img src="https://via.placeholder.com/150x60?text=Client+5" alt="Client logo" class="h-12 opacity-60 hover:opacity-100 transition mx-auto">
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24" id="about">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2">
+          <img src="https://storage.googleapis.com/a1aa/image/6afbf16f-9096-4363-caa0-a4b059cc28cf.jpg" alt="Our team" class="w-full h-auto rounded-xl shadow-lg">
+        </div>
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            About <span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Defindepth</span>
+          </h2>
+          <p class="text-gray-600 mb-6">
+            Founded in 2020, Defindepth Technologies has rapidly emerged as a trusted partner for organizations seeking robust cybersecurity solutions and secure digital transformation.
+          </p>
+          <p class="text-gray-600 mb-8">
+            Our team of certified security experts and developers bring together decades of combined experience in protecting businesses from evolving digital threats while building secure, scalable applications.
+          </p>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <div class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-user-shield text-indigo-600 text-xl"></i>
+              </div>
+              <h3 class="font-semibold text-lg mb-2">Expert Team</h3>
+              <p class="text-gray-600 text-sm">Certified professionals with 10+ years average experience</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-project-diagram text-purple-600 text-xl"></i>
+              </div>
+              <h3 class="font-semibold text-lg mb-2">150+ Projects</h3>
+              <p class="text-gray-600 text-sm">Successfully delivered security solutions across industries</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24" id="services">
+      <div class="text-center mb-16">
+        <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Our Services</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">
+          Comprehensive <span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Security Solutions</span>
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          We offer end-to-end security services to protect your digital assets and ensure compliance with industry standards.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Cyber Security Audit -->
+        <div class="bg-white rounded-xl shadow-md p-8 service-card transition-all duration-300 border border-gray-100 hover:border-indigo-100">
+          <div class="bg-indigo-50 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <img alt="Magnifying glass icon representing cyber security audit" height="40" src="https://storage.googleapis.com/a1aa/image/2bbefc34-24f7-4a60-85f5-9ab184b5d250.jpg" width="40"/>
+          </div>
+          <h3 class="font-bold text-xl mb-4 text-gray-900">
+            Cyber Security Audit
+          </h3>
+          <ul class="text-gray-600 space-y-3 mb-6">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+              <span>Comprehensive Web, Mobile & Network VAPT</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+              <span>API Security Testing</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+              <span>SAST & DAST Implementation</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+              <span>Compliance Audits (ISO 27001, GDPR)</span>
+            </li>
+          </ul>
+          <a href="#contact" class="text-indigo-600 font-medium inline-flex items-center hover:text-indigo-800 transition">
+            Learn more <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        
+        <!-- Secure Web Development -->
+        <div class="bg-white rounded-xl shadow-md p-8 service-card transition-all duration-300 border border-gray-100 hover:border-indigo-100">
+          <div class="bg-purple-50 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <img alt="Code brackets icon representing secure web development" height="40" src="https://storage.googleapis.com/a1aa/image/0255d1be-8f79-4205-2675-d9ee6a50b70a.jpg" width="40"/>
+          </div>
+          <h3 class="font-bold text-xl mb-4 text-gray-900">
+            Secure Web Development
+          </h3>
+          <ul class="text-gray-600 space-y-3 mb-6">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+              <span>Security-first Web Application Development</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+              <span>Cloud-based Scalable Solutions</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+              <span>E-commerce & Payment Solutions</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+              <span>Secure API Development</span>
+            </li>
+          </ul>
+          <a href="#contact" class="text-purple-600 font-medium inline-flex items-center hover:text-purple-800 transition">
+            Learn more <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        
+        <!-- DevSecOps -->
+        <div class="bg-white rounded-xl shadow-md p-8 service-card transition-all duration-300 border border-gray-100 hover:border-indigo-100">
+          <div class="bg-indigo-50 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <img alt="Gear and code icon representing DevSecOps" height="40" src="https://storage.googleapis.com/a1aa/image/d259e4c8-502b-4549-0318-789d38a70285.jpg" width="40"/>
+          </div>
+          <h3 class="font-bold text-xl mb-4 text-gray-900">
+            DevSecOps
+          </h3>
+          <ul class="text-gray-600 space-y-3 mb-6">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+              <span>CI/CD Pipeline Security Integration</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+              <span>Cloud Deployment & Optimization</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+              <span>Infrastructure as Code Security</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+              <span>Automated Security Testing</span>
+            </li>
+          </ul>
+          <a href="#contact" class="text-indigo-600 font-medium inline-flex items-center hover:text-indigo-800 transition">
+            Learn more <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="gradient-bg text-white py-16 mb-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div class="p-6">
+            <div class="text-4xl font-bold mb-2">150+</div>
+            <div class="text-indigo-100 font-medium">Projects Completed</div>
+          </div>
+          <div class="p-6">
+            <div class="text-4xl font-bold mb-2">98%</div>
+            <div class="text-indigo-100 font-medium">Client Satisfaction</div>
+          </div>
+          <div class="p-6">
+            <div class="text-4xl font-bold mb-2">24/7</div>
+            <div class="text-indigo-100 font-medium">Security Monitoring</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24" id="blog">
+      <div class="text-center mb-16">
+        <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Insights</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">
+          Latest <span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Articles</span>
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Stay informed with our expert insights on cybersecurity trends, best practices, and industry updates.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+          <img alt="Illustration of cyber security concept" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/c35435b5-f3c5-4d5a-bcc4-d60d5591d309.jpg"/>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 mb-3">
+              <span>Cybersecurity</span>
+              <span class="mx-2">•</span>
+              <span>May 15, 2024</span>
+            </div>
+            <h3 class="font-bold text-xl mb-3 text-gray-900">
+              Top 5 Cyber Security Trends in 2024
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Explore the emerging threats and security innovations shaping the cybersecurity landscape this year.
+            </p>
+            <a href="#" class="text-indigo-600 font-medium inline-flex items-center hover:text-indigo-800 transition">
+              Read more <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+        
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+          <img alt="Illustration of web development process" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/7ce5a09f-d9ed-4159-a0a6-36b48b9798ee.jpg"/>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 mb-3">
+              <span>Web Development</span>
+              <span class="mx-2">•</span>
+              <span>April 28, 2024</span>
+            </div>
+            <h3 class="font-bold text-xl mb-3 text-gray-900">
+              Building Secure Web Applications
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Essential security practices every developer should implement to protect web applications from vulnerabilities.
+            </p>
+            <a href="#" class="text-indigo-600 font-medium inline-flex items-center hover:text-indigo-800 transition">
+              Read more <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+        
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+          <img alt="Illustration of DevOps automation" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/6afbf16f-9096-4363-caa0-a4b059cc28cf.jpg"/>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 mb-3">
+              <span>DevSecOps</span>
+              <span class="mx-2">•</span>
+              <span>April 10, 2024</span>
+            </div>
+            <h3 class="font-bold text-xl mb-3 text-gray-900">
+              DevSecOps: Integrating Security in DevOps
+            </h3>
+            <p class="text-gray-600 mb-4">
+              How to seamlessly incorporate security practices into your DevOps pipeline for safer, faster releases.
+            </p>
+            <a href="#" class="text-indigo-600 font-medium inline-flex items-center hover:text-indigo-800 transition">
+              Read more <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="#" class="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-full hover:bg-gray-50 transition">
+          View all articles <i class="fas fa-chevron-right ml-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <div class="text-center mb-16">
+        <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Testimonials</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">
+          What Our <span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Clients Say</span>
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+          <div class="flex items-center mb-6">
+            <div class="flex items-center mr-4">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <span class="text-gray-500 text-sm">2 weeks ago</span>
+          </div>
+          <p class="text-gray-700 mb-6 italic">
+            "Defindepth's security audit uncovered critical vulnerabilities in our web application that other firms had missed. Their thorough approach and clear remediation guidance were invaluable."
+          </p>
+          <div class="flex items-center">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-semibold">Rajesh Kumar</h4>
+              <p class="text-gray-500 text-sm">CTO, FinTech Solutions</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+          <div class="flex items-center mb-6">
+            <div class="flex items-center mr-4">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <span class="text-gray-500 text-sm">1 month ago</span>
+          </div>
+          <p class="text-gray-700 mb-6 italic">
+            "The secure e-commerce platform Defindepth developed for us has been flawless. Their attention to security details while maintaining excellent performance is impressive."
+          </p>
+          <div class="flex items-center">
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-semibold">Priya Sharma</h4>
+              <p class="text-gray-500 text-sm">CEO, UrbanStyle</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24" id="contact">
+      <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+        <div class="flex flex-col lg:flex-row">
+          <div class="lg:w-1/2 gradient-bg text-white p-12">
+            <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+            <p class="text-indigo-100 mb-8">
+              Ready to secure your digital assets? Contact our team for a consultation or to discuss your specific security needs.
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="bg-indigo-100 bg-opacity-20 p-3 rounded-lg mr-4">
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">Email Us</h4>
+                  <a href="mailto:contact@didtechnologies.com" class="text-indigo-100 hover:text-white transition">contact@didtechnologies.com</a>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-indigo-100 bg-opacity-20 p-3 rounded-lg mr-4">
+                  <i class="fas fa-phone-alt text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">Call Us</h4>
+                  <a href="tel:+918700246195" class="text-indigo-100 hover:text-white transition">+91 8700246195</a>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-indigo-100 bg-opacity-20 p-3 rounded-lg mr-4">
+                  <i class="fas fa-map-marker-alt text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">Visit Us</h4>
+                  <p class="text-indigo-100">Near Rohini Sector 22, Delhi, India</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-10 flex space-x-4">
+              <a aria-label="LinkedIn" class="social-icon text-white hover:text-indigo-200" href="https://www.linkedin.com/company/defindepth-technologies" rel="noopener noreferrer" target="_blank">
+                <i class="fab fa-linkedin-in fa-lg"></i>
+              </a>
+              <a aria-label="WhatsApp" class="social-icon text-white hover:text-indigo-200" href="https://wa.me/8700246195" rel="noopener noreferrer" target="_blank">
+                <i class="fab fa-whatsapp fa-lg"></i>
+              </a>
+              <a aria-label="Telegram" class="social-icon text-white hover:text-indigo-200" href="https://t.me/defindepth" rel="noopener noreferrer" target="_blank">
+                <i class="fab fa-telegram-plane fa-lg"></i>
+              </a>
+            </div>
+          </div>
+          <div class="lg:w-1/2 p-12">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
+            <form>
+              <div class="grid grid-cols-1 gap-6">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                  <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition">
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                  <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition">
+                </div>
+                <div>
+                  <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                  <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition">
+                </div>
+                <div>
+                  <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                  <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"></textarea>
+                </div>
+                <div>
+                  <button type="submit" class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:shadow-lg transition-all duration-300">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24" id="career">
+      <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+        <div class="flex flex-col lg:flex-row">
+          <div class="lg:w-1/2 p-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              Join Our <span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Team</span>
+            </h2>
+            <p class="text-gray-600 mb-8">
+              At Defindepth Technologies, we're building the future of secure digital solutions. Join our team of passionate security experts and developers.
+            </p>
+            <div class="space-y-6 mb-10">
+              <div class="flex items-start">
+                <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                  <i class="fas fa-briefcase text-indigo-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-lg mb-1">Exciting Opportunities</h4>
+                  <p class="text-gray-600">Work on challenging projects with cutting-edge technologies</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                  <i class="fas fa-users text-purple-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-lg mb-1">Collaborative Culture</h4>
+                  <p class="text-gray-600">Learn and grow with industry experts in a supportive environment</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                  <i class="fas fa-chart-line text-indigo-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-lg mb-1">Career Growth</h4>
+                  <p class="text-gray-600">Continuous learning opportunities and clear growth paths</p>
+                </div>
+              </div>
+            </div>
+            <a href="#contact" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300">
+              Apply Now <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+          <div class="lg:w-1/2 bg-gray-50 p-12">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Current Openings</h3>
+            <div class="space-y-4">
+              <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <h4 class="font-bold text-lg mb-1">Security Analyst</h4>
+                <p class="text-gray-600 text-sm mb-3">Full-time • Delhi/Remote</p>
+                <p class="text-gray-700 mb-4">Conduct security assessments, vulnerability testing, and provide remediation recommendations.</p>
+                <a href="#contact" class="text-indigo-600 font-medium inline-flex items-center text-sm">
+                  Apply <i class="fas fa-chevron-right ml-1"></i>
+                </a>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <h4 class="font-bold text-lg mb-1">Full Stack Developer</h4>
+                <p class="text-gray-600 text-sm mb-3">Full-time • Delhi/Remote</p>
+                <p class="text-gray-700 mb-4">Develop secure web applications with modern frameworks and security-first approach.</p>
+                <a href="#contact" class="text-indigo-600 font-medium inline-flex items-center text-sm">
+                  Apply <i class="fas fa-chevron-right ml-1"></i>
+                </a>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <h4 class="font-bold text-lg mb-1">DevOps Engineer</h4>
+                <p class="text-gray-600 text-sm mb-3">Full-time • Delhi/Remote</p>
+                <p class="text-gray-700 mb-4">Implement and maintain secure CI/CD pipelines with infrastructure as code.</p>
+                <a href="#contact" class="text-indigo-600 font-medium inline-flex items-center text-sm">
+                  Apply <i class="fas fa-chevron-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <div class="gradient-bg rounded-2xl p-12 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Secure Your Digital Assets?</h2>
+        <p class="text-indigo-100 max-w-2xl mx-auto mb-8 text-lg">
+          Get in touch with our security experts today for a free consultation and discover how we can protect your business.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="#contact" class="bg-white text-indigo-600 px-8 py-3 rounded-full text-center font-medium hover:bg-gray-100 transition shadow-lg">
+            Contact Us
+          </a>
+          <a href="tel:+918700246195" class="border border-white text-white px-8 py-3 rounded-full text-center font-medium hover:bg-white hover:bg-opacity-10 transition">
+            Call Now
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
+
   <!-- Footer -->
-  <footer class="bg-indigo-700 text-white py-6">
-   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-sm">
-    <div class="mb-4 md:mb-0">
-     <p>
-      Address: Near Rohini Sec 22, Delhi
-     </p>
-     <p>
-      Email: info@defindepth.com
-     </p>
-     <p>
-      Phone: +91 12345 67890
-     </p>
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="flex items-center space-x-3 mb-6">
+            <img alt="Defindepth Technologies logo" class="h-8 w-auto" src="./logo.png" />
+            <span class="font-bold text-2xl bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+              Defindepth
+            </span>
+          </div>
+          <p class="text-gray-400 mb-6">
+            Your trusted partner for cybersecurity solutions, secure web development, and DevSecOps services.
+          </p>
+          <div class="flex space-x-4">
+            <a aria-label="LinkedIn" class="social-icon text-gray-400 hover:text-white" href="https://www.linkedin.com/company/defindepth-technologies" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-linkedin-in fa-lg"></i>
+            </a>
+            <a aria-label="WhatsApp" class="social-icon text-gray-400 hover:text-white" href="https://wa.me/8700246195" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-whatsapp fa-lg"></i>
+            </a>
+            <a aria-label="Telegram" class="social-icon text-gray-400 hover:text-white" href="https://t.me/defindepth" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-telegram-plane fa-lg"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Services</h3>
+          <ul class="space-y-3">
+            <li><a href="#services" class="text-gray-400 hover:text-white transition">Cyber Security Audit</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-white transition">Secure Web Development</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-white transition">DevSecOps</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-white transition">Compliance Consulting</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-white transition">Security Training</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Company</h3>
+          <ul class="space-y-3">
+            <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+            <li><a href="#blog" class="text-gray-400 hover:text-white transition">Insights</a></li>
+            <li><a href="#career" class="text-gray-400 hover:text-white transition">Careers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Case Studies</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Contact Info</h3>
+          <address class="not-italic text-gray-400 space-y-3">
+            <p class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-gray-500"></i>
+              <span>Near Rohini Sector 22, Delhi, India</span>
+            </p>
+            <p class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-3 text-gray-500"></i>
+              <a href="mailto:contact@didtechnologies.com" class="hover:text-white transition">contact@didtechnologies.com</a>
+            </p>
+            <p class="flex items-start">
+              <i class="fas fa-phone-alt mt-1 mr-3 text-gray-500"></i>
+              <a href="tel:+918700246195" class="hover:text-white transition">+91 8700246195</a>
+            </p>
+          </address>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-500 text-sm mb-4 md:mb-0">
+          © 2024 Defindepth Technologies Pvt Ltd. All rights reserved.
+        </p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-500 hover:text-white text-sm transition">Privacy Policy</a>
+          <a href="#" class="text-gray-500 hover:text-white text-sm transition">Terms of Service</a>
+          <a href="#" class="text-gray-500 hover:text-white text-sm transition">Cookies</a>
+        </div>
+      </div>
     </div>
-    <div class="flex space-x-6 mb-4 md:mb-0">
-     <a aria-label="LinkedIn" class="social-icon hover:text-indigo-300" href="https://www.linkedin.com/company/defindepth-technologies" rel="noopener noreferrer" target="_blank">
-      <i class="fab fa-linkedin fa-lg"></i>
-     </a>
-     <a aria-label="WhatsApp" class="social-icon hover:text-indigo-300" href="https://wa.me/8700246195" rel="noopener noreferrer" target="_blank">
-      <i class="fab fa-whatsapp fa-lg"></i>
-     </a>
-     <a aria-label="Telegram" class="social-icon hover:text-indigo-300" href="https://t.me/defindepth" rel="noopener noreferrer" target="_blank">
-      <i class="fab fa-telegram fa-lg"></i>
-     </a>
-    </div>
-    <div>
-     <p>
-      © 2024 Defindepth Technologies Pvt Ltd. All rights reserved.
-     </p>
-    </div>
-   </div>
   </footer>
+
   <script>
-   const menuBtn = document.getElementById('menu-btn');
+    const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+      menuBtn.innerHTML = mobileMenu.classList.contains('hidden') ? 
+        '<i class="fas fa-bars fa-lg"></i>' : 
+        '<i class="fas fa-times fa-lg"></i>';
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.innerHTML = '<i class="fas fa-bars fa-lg"></i>';
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
     });
   </script>
- </body>
+</body>
 </html>
