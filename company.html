@@ -1,0 +1,306 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Defindepth Technologies Pvt Ltd
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+   a.social-icon {
+     transition: color 0.3s ease;
+   }
+   a.social-icon:hover {
+     color: #4F46E5; /* Indigo-600 */
+   }
+  </style>
+ </head>
+ <body class="bg-gray-50 text-gray-900">
+  <!-- Header -->
+  <header class="bg-white shadow-md fixed w-full z-30">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+     <a class="flex items-center space-x-2" href="#">
+      <img alt="Defindepth Technologies logo" class="h-6 w-auto" src="./logo.png" />
+      <span class="font-semibold text-xl text-indigo-600">
+       Defindepth
+      </span>
+     </a>
+     <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+      <a class="hover:text-indigo-600 transition" href="#services">
+       Services
+      </a>
+      <a class="hover:text-indigo-600 transition" href="#blog">
+       Blog
+      </a>
+      <a class="hover:text-indigo-600 transition" href="#contact">
+       Contact
+      </a>
+      <a class="hover:text-indigo-600 transition" href="#career">
+       Career
+      </a>
+     </nav>
+     <div class="hidden md:flex space-x-4 items-center">
+      <a aria-label="LinkedIn" class="social-icon text-gray-700 hover:text-indigo-600" href="https://www.linkedin.com/company/defindepth-technologies" rel="noopener noreferrer" target="_blank">
+       <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+      <a aria-label="WhatsApp" class="social-icon text-gray-700 hover:text-indigo-600" href="https://wa.me/8700246195" rel="noopener noreferrer" target="_blank">
+       <i class="fab fa-whatsapp fa-lg"></i>
+      </a>
+      <a aria-label="Telegram" class="social-icon text-gray-700 hover:text-indigo-600" href="https://t.me/defindepth" rel="noopener noreferrer" target="_blank">
+       <i class="fab fa-telegram fa-lg"></i>
+      </a>
+     </div>
+     <button aria-label="Toggle menu" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-600" id="menu-btn">
+      <i class="fas fa-bars fa-lg">
+      </i>
+     </button>
+    </div>
+   </div>
+   <!-- Mobile menu -->
+   <div class="hidden md:hidden bg-white border-t border-gray-200" id="mobile-menu">
+    <nav class="flex flex-col space-y-1 p-4 text-gray-700 font-medium">
+     <a class="hover:text-indigo-600 transition" href="#services">
+      Services
+     </a>
+     <a class="hover:text-indigo-600 transition" href="#blog">
+      Blog
+     </a>
+     <a class="hover:text-indigo-600 transition" href="#contact">
+      Contact
+     </a>
+     <a class="hover:text-indigo-600 transition" href="#career">
+      Career
+     </a>
+     <div class="flex space-x-6 mt-4 justify-center">
+      <a aria-label="LinkedIn" class="social-icon text-gray-700 hover:text-indigo-600" href="https://www.linkedin.com/company/defindepth-technologies" rel="noopener noreferrer" target="_blank">
+       <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+      <a aria-label="WhatsApp" class="social-icon text-gray-700 hover:text-indigo-600" href="https://wa.me/8700246195" rel="noopener noreferrer" target="_blank">
+       <i class="fab fa-whatsapp fa-lg"></i>
+      </a>
+      <a aria-label="Telegram" class="social-icon text-gray-700 hover:text-indigo-600" href="https://t.me/defindepth" rel="noopener noreferrer" target="_blank">
+       <i class="fab fa-telegram fa-lg"></i>
+      </a>
+     </div>
+    </nav>
+   </div>
+  </header>
+  <main class="pt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+   <!-- Hero Section with increased height -->
+   <section class="flex flex-col md:flex-row items-center justify-center md:justify-between bg-white rounded-lg shadow-md p-8 my-12" style="min-height: 180px;">
+    <img alt="Shield icon representing security" class="w-28 h-28 mb-6 md:mb-0 md:mr-8" height="120" src="https://storage.googleapis.com/a1aa/image/bc6db80b-7869-4182-9b3d-1da8b1aab728.jpg" width="120"/>
+    <div class="text-center md:text-left max-w-xl">
+     <h1 class="text-3xl font-semibold text-indigo-700 mb-2">
+      Defindepth Technologies Pvt Ltd
+     </h1>
+     <p class="text-gray-600 mb-6 text-lg">
+      Your Trusted Security Service Company
+     </p>
+     <a class="inline-block bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 transition" href="#contact">
+      Contact Us
+     </a>
+    </div>
+   </section>
+   <!-- Services Section -->
+   <section class="mb-16" id="services">
+    <h2 class="text-2xl font-semibold text-indigo-700 mb-8 text-center">
+     Our Services
+    </h2>
+    <div aria-label="Services offered" class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center" role="list">
+     <!-- Cyber Security Audit -->
+     <article class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition">
+      <img alt="Magnifying glass icon representing cyber security audit" class="mb-4" height="80" src="https://storage.googleapis.com/a1aa/image/2bbefc34-24f7-4a60-85f5-9ab184b5d250.jpg" width="80"/>
+      <h3 class="font-semibold text-lg mb-2">
+       Cyber Security Audit
+      </h3>
+      <ul class="text-gray-600 text-sm list-disc list-inside space-y-1">
+       <li>
+        Web VAPT
+       </li>
+       <li>
+        Mobile VAPT
+       </li>
+       <li>
+        Network VAPT
+       </li>
+       <li>
+        Web API Security
+       </li>
+       <li>
+        SAST
+       </li>
+       <li>
+        DAST
+       </li>
+      </ul>
+     </article>
+     <!-- Secure Web Development -->
+     <article class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition">
+      <img alt="Code brackets icon representing secure web development" class="mb-4" height="80" src="https://storage.googleapis.com/a1aa/image/0255d1be-8f79-4205-2675-d9ee6a50b70a.jpg" width="80"/>
+      <h3 class="font-semibold text-lg mb-2">
+       Secure Web Development
+      </h3>
+      <ul class="text-gray-600 text-sm list-disc list-inside space-y-1">
+       <li>
+        Web Development
+       </li>
+       <li>
+        Cloud-based Web Apps
+       </li>
+       <li>
+        E-commerce Solutions
+       </li>
+       <li>
+        Payment Module Integration
+       </li>
+      </ul>
+     </article>
+     <!-- DevSecOps -->
+     <article class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition">
+      <img alt="Gear and code icon representing DevSecOps" class="mb-4" height="80" src="https://storage.googleapis.com/a1aa/image/d259e4c8-502b-4549-0318-789d38a70285.jpg" width="80"/>
+      <h3 class="font-semibold text-lg mb-2">
+       DevSecOps
+      </h3>
+      <ul class="text-gray-600 text-sm list-disc list-inside space-y-1 text-left">
+       <li>
+        DevOps Support &amp; Automation
+       </li>
+       <li>
+        Deployment in AWS, Azure, GCP
+       </li>
+       <li>
+        Maintenance &amp; Cost Optimization
+       </li>
+       <li>
+        All DevOps Tasks
+       </li>
+      </ul>
+     </article>
+    </div>
+   </section>
+   <!-- Blog Section -->
+   <section class="mb-16" id="blog">
+    <h2 class="text-2xl font-semibold text-indigo-700 mb-8 text-center">
+     Latest Blog Posts
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+      <img alt="Illustration of cyber security concept" class="rounded-md mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/c35435b5-f3c5-4d5a-bcc4-d60d5591d309.jpg" width="400"/>
+      <h3 class="font-semibold text-lg mb-2">
+       Top 5 Cyber Security Trends in 2024
+      </h3>
+      <p class="text-gray-600 text-sm">
+       Stay ahead with the latest trends in cyber security to protect your business.
+      </p>
+     </article>
+     <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+      <img alt="Illustration of web development process" class="rounded-md mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/7ce5a09f-d9ed-4159-a0a6-36b48b9798ee.jpg" width="400"/>
+      <h3 class="font-semibold text-lg mb-2">
+       Building Secure Web Applications
+      </h3>
+      <p class="text-gray-600 text-sm">
+       Best practices and tools for developing secure and scalable web apps.
+      </p>
+     </article>
+     <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+      <img alt="Illustration of DevOps automation" class="rounded-md mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/6afbf16f-9096-4363-caa0-a4b059cc28cf.jpg" width="400"/>
+      <h3 class="font-semibold text-lg mb-2">
+       DevSecOps: Integrating Security in DevOps
+      </h3>
+      <p class="text-gray-600 text-sm">
+       How to automate security in your DevOps pipeline for faster and safer releases.
+      </p>
+     </article>
+    </div>
+   </section>
+   <!-- Contact Section -->
+   <section class="bg-white rounded-lg shadow-md p-8 max-w-3xl mx-auto mb-16" id="contact">
+    <h2 class="text-2xl font-semibold text-indigo-700 mb-6 text-center">
+     Contact Us
+    </h2>
+    <p class="text-center text-gray-700 text-lg mb-2">
+     Please mail to <a class="text-indigo-600 underline" href="mailto:contact@didtechnologies.com">contact@didtechnologies.com</a> to contact us.
+    </p>
+    <p class="text-center text-gray-700 text-lg">
+     Or call us at <a class="text-indigo-600 underline" href="tel:+918700246195">8700246195</a>
+    </p>
+   </section>
+   <!-- Career Section -->
+   <section class="bg-white rounded-lg shadow-md p-8 max-w-3xl mx-auto mb-16" id="career">
+    <h2 class="text-2xl font-semibold text-indigo-700 mb-6 text-center">
+     Career Opportunities
+    </h2>
+    <p class="text-gray-700 mb-4 text-center">
+     Join our team and help us build secure and innovative technology solutions.
+    </p>
+    <ul class="list-disc list-inside max-w-xl mx-auto space-y-2 text-gray-600">
+     <li>
+      Security Analyst
+     </li>
+     <li>
+      Web Developer (Full Stack)
+     </li>
+     <li>
+      DevOps Engineer
+     </li>
+     <li>
+      Cloud Security Specialist
+     </li>
+     <li>
+      Technical Support Engineer
+     </li>
+    </ul>
+    <p class="text-center text-gray-700 mt-6 text-lg">
+     Mail your CV to <a class="text-indigo-600 underline" href="mailto:contact@didtechnologies.com">contact@didtechnologies.com</a>
+    </p>
+   </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-indigo-700 text-white py-6">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-sm">
+    <div class="mb-4 md:mb-0">
+     <p>
+      Address: Near Rohini Sec 22, Delhi
+     </p>
+     <p>
+      Email: info@defindepth.com
+     </p>
+     <p>
+      Phone: +91 12345 67890
+     </p>
+    </div>
+    <div class="flex space-x-6 mb-4 md:mb-0">
+     <a aria-label="LinkedIn" class="social-icon hover:text-indigo-300" href="https://www.linkedin.com/company/defindepth-technologies" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-linkedin fa-lg"></i>
+     </a>
+     <a aria-label="WhatsApp" class="social-icon hover:text-indigo-300" href="https://wa.me/8700246195" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-whatsapp fa-lg"></i>
+     </a>
+     <a aria-label="Telegram" class="social-icon hover:text-indigo-300" href="https://t.me/defindepth" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-telegram fa-lg"></i>
+     </a>
+    </div>
+    <div>
+     <p>
+      © 2024 Defindepth Technologies Pvt Ltd. All rights reserved.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script>
+   const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+ </body>
+</html>
