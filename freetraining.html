@@ -4,364 +4,508 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free CCSP Training | Defindepth Technologies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Modern Base Styles (matching your site) */
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #f8f9fa;
-            --dark: #333;
-            --gray: #7f8c8d;
+        /* ===== Base Styles (Matches Your Original) ===== */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f9fa;
         }
         
-        body {
-            font-family: 'Segoe UI', 'Arial', sans-serif;
-            line-height: 1.6;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0;
-            color: var(--dark);
-            background-color: var(--light);
-        }
-
-        /* Modern Header - Enhanced but matching */
-        .header {
-            text-align: center;
-            padding: 40px 30px 30px;
-            background: linear-gradient(135deg, var(--primary) 0%, #1a2530 100%);
+        /* ===== Modern Header (Enhanced Version of Yours) ===== */
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #1a2530 100%);
             color: white;
-            margin-bottom: 40px;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-
-        .name {
-            font-size: 2.8rem;
-            font-weight: 800;
-            margin: 10px 0;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .title {
-            font-size: 1.8rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
-            font-weight: 400;
-        }
-
-        .contact-info {
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
             display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 20px;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
         }
-
-        .contact-info a {
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-menu a {
             color: white;
             text-decoration: none;
-            transition: all 0.3s;
             font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
         }
-
-        .contact-info a:hover {
-            color: var(--secondary);
-            transform: translateY(-2px);
+        
+        .nav-menu a:hover {
+            color: #3498db;
         }
-
-        /* Modern Content Container */
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #3498db;
+            transform: translateY(-3px);
+        }
+        
+        /* ===== Hero Section (Modern Design) ===== */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        /* ===== Main Content (Matches Your Style) ===== */
         .container {
-            padding: 0 30px 50px;
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
         }
-
-        /* Modern Section Styling */
+        
         section {
-            margin-bottom: 50px;
             background: white;
             border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
+        
         section:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
-
+        
         h2 {
-            color: var(--primary);
-            border-bottom: 2px solid var(--secondary);
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-            font-size: 1.8rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
             display: inline-block;
         }
-
-        /* Modern List Styling */
-        ul {
-            padding-left: 0;
-            list-style-type: none;
-        }
-
-        li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 12px;
-            line-height: 1.7;
-        }
-
-        li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 8px;
-            width: 12px;
-            height: 12px;
-            background-color: var(--secondary);
-            border-radius: 50%;
-        }
-
-        /* Modern Cards */
+        
+        /* ===== Modern Card Grid ===== */
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
         }
-
+        
         .card {
             background: white;
             border-radius: 8px;
-            padding: 25px;
+            padding: 2rem;
             box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            border-top: 4px solid var(--secondary);
-            transition: all 0.3s;
+            border-top: 4px solid #3498db;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
-
+        
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
-
-        .card h3 {
-            color: var(--primary);
-            margin-top: 0;
-            font-size: 1.3rem;
-        }
-
+        
         .card-icon {
             font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--secondary);
+            color: #3498db;
+            margin-bottom: 1.5rem;
         }
-
-        /* Modern Button */
+        
+        .card h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        
+        /* ===== Modern List ===== */
+        .modern-list {
+            padding-left: 0;
+            list-style-type: none;
+        }
+        
+        .modern-list li {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        
+        .modern-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background-color: #3498db;
+            border-radius: 50%;
+        }
+        
+        /* ===== CTA Button ===== */
         .cta-button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: var(--primary);
+            background: #2c3e50;
             color: white;
-            padding: 15px 30px;
+            padding: 1rem 2rem;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
-            margin: 20px 0;
-            transition: all 0.3s;
+            margin: 1.5rem 0;
+            transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             border: none;
             cursor: pointer;
-            gap: 10px;
+            gap: 0.75rem;
+            font-size: 1.1rem;
         }
-
+        
         .cta-button:hover {
-            background: var(--secondary);
+            background: #3498db;
             transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
         }
-
-        .cta-button .icon {
-            font-size: 1.2rem;
-        }
-
-        /* Modern Banner */
-        .hero-banner {
-            background: linear-gradient(135deg, var(--secondary) 0%, #2980b9 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 8px;
-            margin-bottom: 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-banner::after {
-            content: "";
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 200px;
-            height: 200px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-        }
-
-        .hero-banner h2 {
-            color: white;
-            border-bottom: none;
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-        }
-
-        /* Modern Footer */
+        
+        /* ===== Footer (Matches Your Style) ===== */
         footer {
-            background: var(--primary);
+            background: #2c3e50;
             color: white;
-            padding: 30px;
+            padding: 3rem 0;
             text-align: center;
-            margin-top: 50px;
         }
-
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 25px;
-            margin: 20px 0;
+            gap: 2rem;
+            margin-bottom: 2rem;
             flex-wrap: wrap;
         }
-
+        
         .footer-links a {
             color: white;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
-
+        
         .footer-links a:hover {
-            color: var(--secondary);
+            color: #3498db;
         }
-
+        
         .copyright {
             color: rgba(255,255,255,0.7);
             font-size: 0.9rem;
+            margin-top: 1.5rem;
         }
-
-        /* Responsive Adjustments */
+        
+        /* ===== Animations ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* ===== Responsive Design ===== */
         @media (max-width: 768px) {
-            .name {
-                font-size: 2rem;
+            .header-container {
+                flex-direction: column;
+                padding: 1rem;
             }
-            .title {
-                font-size: 1.4rem;
+            
+            .nav-menu {
+                margin: 1.5rem 0;
             }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
             .card-grid {
                 grid-template-columns: 1fr;
             }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Modern Header -->
-    <header class="header">
-        <div class="name">DEFINDEPTH TECHNOLOGIES</div>
-        <div class="title">FREE CCSP Cybersecurity Training</div>
-        <div class="contact-info">
-            <a href="mailto:info@didtechnologies.com"><i class="fas fa-envelope"></i> info@didtechnologies.com</a>
-            <a href="https://www.linkedin.com/company/defindepth" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://didtechnologies.com" target="_blank"><i class="fas fa-globe"></i> Website</a>
+    <!-- Modern Header with Logo and Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://via.placeholder.com/50x50?text=DT" alt="Defindepth Logo" class="logo-img">
+                <span class="logo-text">DEFINDEPTH</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="training.html" class="active">Training</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
         </div>
     </header>
 
-    <div class="container">
-        <!-- Hero Banner -->
-        <section class="hero-banner">
-            <h2><i class="fas fa-bolt"></i> Exciting Training Announcement!</h2>
-            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">Join our FREE 2-day Certified Cyber Security Professional (CCSP) webinar this August and jumpstart your cybersecurity career!</p>
-        </section>
+    <!-- Hero Section with Background Image -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>FREE CCSP Cybersecurity Training</h1>
+            <p>Join our intensive 2-day Certified Cyber Security Professional webinar and gain practical skills from industry experts</p>
+            <a href="#register" class="cta-button">
+                <i class="fas fa-user-plus"></i> Register Now
+            </a>
+        </div>
+    </section>
 
+    <!-- Main Content Container -->
+    <div class="container">
         <!-- Benefits Section -->
         <section>
             <h2><i class="fas fa-star"></i> What You'll Gain</h2>
             <div class="card-grid">
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3>Hands-On Learning</h3>
-                    <p>Practical sessions led by industry experts with real-world scenarios</p>
+                    <h3>Hands-On Training</h3>
+                    <p>Practical sessions using real-world tools and techniques in cybersecurity</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="card-icon"><i class="fas fa-certificate"></i></div>
                     <h3>Valuable Certification</h3>
-                    <p>Earn a completion certificate with 20 CPE credits</p>
+                    <p>Receive a completion certificate with 20 CPE credits recognized industry-wide</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="card-icon"><i class="fas fa-briefcase"></i></div>
                     <h3>Career Advancement</h3>
-                    <p>Boost your professional profile in the cybersecurity field</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-gift"></i></div>
-                    <h3>Completely Free</h3>
-                    <p>No hidden costs - we're committed to cybersecurity education</p>
+                    <p>Boost your professional profile in the high-demand cybersecurity field</p>
                 </div>
             </div>
         </section>
 
-        <!-- Details Section -->
+        <!-- Training Details -->
         <section>
-            <h2><i class="fas fa-info-circle"></i> Training Details</h2>
-            <ul>
-                <li><strong>Format:</strong> Interactive online webinar with live Q&A</li>
-                <li><strong>Duration:</strong> 2 intensive days (Saturday & Sunday)</li>
-                <li><strong>Dates:</strong> August 2024 (exact dates announced soon)</li>
-                <li><strong>Time:</strong> 10:00 AM - 4:00 PM (IST) with breaks</li>
+            <h2><i class="fas fa-calendar-alt"></i> Training Details</h2>
+            <ul class="modern-list">
+                <li><strong>Format:</strong> Interactive online webinar with live demonstrations</li>
+                <li><strong>Duration:</strong> 2 intensive days (Weekend sessions)</li>
+                <li><strong>Dates:</strong> August 24-25, 2024</li>
+                <li><strong>Time:</strong> 10:00 AM - 4:00 PM (IST) daily with breaks</li>
                 <li><strong>Requirements:</strong> Basic computer knowledge (no prior security experience needed)</li>
             </ul>
         </section>
 
-        <!-- Who Should Attend -->
+        <!-- Curriculum Section -->
         <section>
-            <h2><i class="fas fa-users"></i> Who Should Attend?</h2>
+            <h2><i class="fas fa-book"></i> Curriculum Overview</h2>
             <div class="card-grid">
                 <div class="card">
-                    <h3><i class="fas fa-user-graduate" style="color: var(--secondary);"></i> Students</h3>
-                    <p>Looking to start a career in cybersecurity</p>
+                    <h3>Day 1: Fundamentals</h3>
+                    <ul class="modern-list">
+                        <li>Cybersecurity Principles</li>
+                        <li>Threat Landscape Analysis</li>
+                        <li>Network Security Basics</li>
+                        <li>Web Application Security</li>
+                    </ul>
                 </div>
                 <div class="card">
-                    <h3><i class="fas fa-briefcase" style="color: var(--secondary);"></i> IT Professionals</h3>
-                    <p>Wanting to upskill in security domains</p>
-                </div>
-                <div class="card">
-                    <h3><i class="fas fa-exchange-alt" style="color: var(--secondary);"></i> Career Changers</h3>
-                    <p>Transitioning to cybersecurity roles</p>
+                    <h3>Day 2: Advanced Topics</h3>
+                    <ul class="modern-list">
+                        <li>Penetration Testing</li>
+                        <li>Security Tools Workshop</li>
+                        <li>Incident Response</li>
+                        <li>Career Pathways</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Registration CTA -->
-        <section style="text-align: center;">
-            <h2><i class="fas fa-clipboard-list"></i> Secure Your Spot</h2>
-            <p style="font-size: 1.1rem; margin-bottom: 25px;">Limited seats available! Join our Telegram group to receive the registration link when it goes live.</p>
-            <a href="https://t.me/did_ccsp" class="cta-button">
-                <i class="fab fa-telegram icon"></i> Join Telegram Group
-            </a>
-            <p style="color: var(--gray); font-size: 0.9rem;">Registration will open soon - don't miss out!</p>
+        <!-- Registration Section -->
+        <section id="register">
+            <h2><i class="fas fa-user-check"></i> Registration</h2>
+            <p>This training is completely free with limited seats available. Secure your spot today!</p>
+            
+            <div style="background: #f0f8ff; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+                <h3 style="margin-top: 0;">How to Register:</h3>
+                <ol class="modern-list" style="counter-reset: step-counter;">
+                    <li style="position: relative; padding-left: 3rem;">Join our Telegram group for updates</li>
+                    <li style="position: relative; padding-left: 3rem;">Complete the registration form when released</li>
+                    <li style="position: relative; padding-left: 3rem;">Receive confirmation email with joining details</li>
+                </ol>
+                
+                <a href="https://t.me/did_ccsp" class="cta-button" style="margin-top: 1.5rem;">
+                    <i class="fab fa-telegram"></i> Join Telegram Group
+                </a>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section>
+            <h2><i class="fas fa-quote-left"></i> What Participants Say</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <p style="font-style: italic;">"The Defindepth training transformed my understanding of cybersecurity. The practical approach made complex concepts easy to grasp."</p>
+                    <p style="font-weight: bold; text-align: right;">- Rahul K., IT Professional</p>
+                </div>
+                <div class="card">
+                    <p style="font-style: italic;">"I landed my first cybersecurity job thanks to the skills and certificate from this training program. Highly recommended!"</p>
+                    <p style="font-weight: bold; text-align: right;">- Priya M., Career Changer</p>
+                </div>
+            </div>
         </section>
     </div>
 
-    <!-- Modern Footer -->
+    <!-- Footer -->
     <footer>
-        <div class="footer-links">
-            <a href="https://didtechnologies.com">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-            <a href="privacy.html">Privacy Policy</a>
-        </div>
-        <div class="copyright">
-            © 2024 Defindepth Technologies Pvt Ltd. All rights reserved.
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="training.html">Training</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+            
+            <div class="social-links" style="justify-content: center; margin: 1.5rem 0;">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <div class="copyright">
+                © 2024 Defindepth Technologies Pvt Ltd. All rights reserved.
+            </div>
         </div>
     </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            sections.forEach(section => {
+                section.style.opacity = 0;
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'all 0.6s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
